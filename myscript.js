@@ -20,14 +20,16 @@ function createGrid(gridAmount) {
     }
     let squares = document.querySelectorAll('.square');
     squares.forEach(square => {
-        square.addEventListener("mouseenter", () => { paint(square) }, true);
+        square.addEventListener("mouseenter", () => { paint(square) });
     });
 }
 
 
 function getSize() {
     num = parseInt(document.querySelector(".inp").value);
+    if (num > 100) num = 100;
     inbox = document.querySelector(".inp");
+    inbox.value = num;
     inbox.addEventListener("keypress", (e) => {
         if (e.key == "Enter") {
             getSize();
