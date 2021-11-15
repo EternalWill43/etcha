@@ -3,24 +3,41 @@
     --grid-rows: 1;
 }
 
+body {
+    background-color: rgb(31, 28, 28);
+}
+
 #container {
     display: grid;
     justify-content: center;
-    grid-template-rows: repeat(var(--grid-rows), 25px);
-    grid-template-columns: repeat(var(--grid-cols), 25px);
+    grid-template-rows: repeat(var(--grid-rows), 15px);
+    grid-template-columns: repeat(var(--grid-cols), 15px);
 }
 
 .header {
     display: flex;
     justify-content: center;
+    font-style: bold;
+    color: white;
+    font-size: 30px;
 }
 
 .btns {
-    display:flex;
+    display: flex;
     justify-content: center;
-    padding: 10px;
 }
 
 .grid-item {
     border: 1px solid #000;
+    background-color: white;
+}
+
+.but {
+    background-color: rgba(231, 213, 213);  
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    color: black;
+    font-weight: 600;
 }

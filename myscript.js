@@ -2,6 +2,7 @@ function paint(div) {
     div.setAttribute('style', 'background-color: black;');
 }
 
+
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
@@ -15,7 +16,7 @@ function makeRows(rows, cols) {
     })
   };
   
-  makeRows(16, 16);
+  makeRows(32,32);
 
   function unpaint() {
       let squares = document.querySelectorAll('.grid-item');
