@@ -27,12 +27,19 @@ function createGrid(gridAmount) {
 
 function getSize() {
     num = parseInt(document.querySelector(".inp").value);
+    inbox = document.querySelector(".inp");
+    inbox.addEventListener("keypress", (e) => {
+        if (e.key == "Enter") {
+            getSize();
+        }
+    })
     allboxes = document.querySelectorAll('.square');
     allboxes.forEach(box => {
         box.remove();
     })
     console.log(num);
     createGrid(num);
+
 }
 
 function cleargrid() {
@@ -41,4 +48,6 @@ function cleargrid() {
         square.style.backgroundColor = "white";
     })
 }
+
+
 getSize();
